@@ -6,26 +6,25 @@ chatbot = ChatBot("MiniBot",
                   storage_adapter='chatterbot.storage.SQLStorageAdapter',
                   logic_adapters=[
                       'chatterbot.logic.MathematicalEvaluation',
-                      'chatterbot.logic.TimeLogicAdapter'
+                      'chatterbot.logic.TimeLogicAdapter',
+                      'chatterbot.logic.BestMatch'
                   ],
                   database_uri='sqlite:///database.sqlite3'
 )
-trainer = ListTrainer(chatbot)
+general_trainer = ChatterBotCorpusTrainer(chatbot)
 
-trainer.train([
-    "Hi there!",
-    "Hello",
-])
+general_trainer.train(
+    "chatterbot.corpus.english.greetings",
+    "chatterbot.corpus.english.conversations",
+)
 
-trainer.train([
-    "Hi",
-    "Hello",
-])
+while True:
+    try:
 
-trainer.train([
-    "What's up?",
-    "Whatever it is, it's nothing.",
-])
+        bot_response = chatbot.get_response(input())
 
-response = chatbot.get_response('Hi')
-print(response)
+        print(bot_response)
+
+    # Press ctrl-c or ctrl-d on the keyboard to exit
+    except (KeyboardInterrupt, EOFError, SystemExit):
+        break
