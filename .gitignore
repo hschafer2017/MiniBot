@@ -1,0 +1,5 @@
+# SQLite Database
+database.sqlite3
+
+# NLTK Sentence Tokenizer
+sentence_tokenizer.pickle
