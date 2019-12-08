@@ -45,6 +45,6 @@ def get_bot_response():
 
 
 if __name__ == "__main__":    
-    app.run()
+    # app.run()
     # For Heroku deployment
-    # app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
+    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
