@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>MiniBot</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     </head>
     <body>
         <center>
@@ -15,8 +16,11 @@
                 <center><span>Hi! I'm Minibot -- Come chat with me!</span></center>
             </p>
         </div>
+        <div id="chatbox"></div>
         <div id="userInput">
             <input id="textInput" type="text" name="msg" placeholder="What's up?" />
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='main.js')}}"></script>
     </body>
 </html>
