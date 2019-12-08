@@ -37,6 +37,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5em;
     text-align: center;
+    background-color: #fafafa;
   }
   .userText {
     color: purple;
@@ -52,3 +53,11 @@ body {
     text-align: left;
     line-height: 1.3em;
   }
+.github-link {
+    text-align: center;
+    margin-top: 2em;
+}
+i {
+    color: darkslategray;
+    font-size: 2em;
+}

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>MiniBot</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
         <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     </head>
     <body>
@@ -19,6 +20,9 @@
         <div id="chatbox"></div>
         <div id="userInput">
             <input id="textInput" type="text" name="msg" placeholder="What's up?" />
+        </div>
+        <div class="github-link">
+            <a href="https://www.github.com/hschafer2017/MiniBot" target="_blank"><i class="fab fa-github alignment"></i></a>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="{{url_for('static', filename='main.js')}}"></script>
