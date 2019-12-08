@@ -3,8 +3,13 @@ certifi==2019.11.28
 chardet==3.0.4
 ChatterBot==1.0.5
 chatterbot-corpus==1.2.0
+Click==7.0
 cymem==2.0.3
+Flask==1.1.1
 idna==2.8
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
 mathparse==0.1.2
 murmurhash==1.0.2
 nltk==3.4.5
@@ -12,9 +17,10 @@ numpy==1.17.4
 Pint==0.9
 plac==0.9.6
 preshed==2.0.1
+pymongo==3.9.0
 python-dateutil==2.7.5
 pytz==2019.3
-PyYAML==5.1
+PyYAML==3.13
 requests==2.22.0
 six==1.13.0
 spacy==2.1.9
@@ -24,3 +30,4 @@ thinc==7.0.8
 tqdm==4.39.0
 urllib3==1.25.7
 wasabi==0.4.0
+Werkzeug==0.16.0

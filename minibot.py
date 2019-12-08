@@ -1,6 +1,9 @@
+from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
 
+
+app = Flask(__name__)
 
 chatbot = ChatBot("MiniBot",
                   storage_adapter='chatterbot.storage.SQLStorageAdapter',
@@ -30,13 +33,16 @@ general_trainer.train(
     "training_data/training_data.yml"
 )
 
-while True:
-    try:
+@app.route("/")
+def home():    
+    return render_template("index.html") 
 
-        bot_response = chatbot.get_response(input(f'You: '))
 
-        print(f'MiniBot: {bot_response}')
+@app.route("/get")
+def get_bot_response():    
+    userText = request.args.get('msg')    
+    return str(chatbot.get_response(userText)) 
 
-    # Press ctrl-c or ctrl-d on the keyboard to exit
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        break
+
+if __name__ == "__main__":    
+    app.run()
